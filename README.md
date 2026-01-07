@@ -7,7 +7,7 @@ into a predefined JSON format suitable for gateway-to-backend communication.
 
 ## Platform & Language
 - **Language:** C (ANSI C)
-- **Platform:** STM32 / Generic Embedded Systems
+- **Platform:** STM32 / Generic Embedded Systems  
 
 C was chosen to ensure deterministic memory usage, high portability, and suitability
 for resource-constrained embedded firmware environments.
@@ -21,8 +21,6 @@ for resource-constrained embedded firmware environments.
 - Clear and minimal public API
 
 ## Project Structure
-Project Structure
-
 /
 ├── include/
 │   └── json_serializer.h
@@ -32,14 +30,16 @@ Project Structure
 │   └── example_main.c
 └── README.md
 
-Public API
 
+## Public API
+```c
 json_status_t serialize_to_json(
     const gateway_data_t *input,
     char *output,
     size_t output_size,
     size_t *bytes_written
 );
+
 
 - input: Pointer to populated gateway data structure
 - output: Caller-provided buffer for JSON output
